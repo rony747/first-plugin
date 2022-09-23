@@ -31,6 +31,11 @@ class Avro_Plugin_Deactivator {
 	 */
 	public static function deactivate() {
 
+    //unregister post type
+    unregister_post_type('book');
+
+    // flush permalinks
+    flush_rewrite_rules();
 	}
 
 }
